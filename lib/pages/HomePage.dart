@@ -33,7 +33,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 48,
+              height: 38,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -82,6 +82,9 @@ class HomePage extends StatelessWidget {
                       itemPrice: value.shopItems[index][1],
                       imagePath: value.shopItems[index][2],
                       color: value.shopItems[index][3],
+                      onPressed: (){
+                        Provider.of<CartModel>(context, listen: false).addItemToCart(index);
+                      },
                     );
                   });
             })),
