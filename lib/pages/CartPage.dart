@@ -68,12 +68,9 @@ class CartPage extends StatelessWidget {
                     );
                   }
                 },
-              ))
-            ],
-          );
-
-          //total + pay now
-          Padding(
+              )
+            ),
+            Padding(
             padding: const EdgeInsets.all(36.0),
             child: Container(
               decoration: BoxDecoration(
@@ -100,7 +97,7 @@ class CartPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     padding: EdgeInsets.all(12),
-                    child: Column(
+                    child: Row(
                       children: [
                         Text("Pay now",style: TextStyle(color: Colors.white),),
                         Icon(
@@ -114,7 +111,12 @@ class CartPage extends StatelessWidget {
                 ],
               ),
             ),
+          )
+            ],
           );
+
+          //total + pay now
+          
         }));
   }
 }
